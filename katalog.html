@@ -2,107 +2,36 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Produk - Kak Tovie</title>
+    <title>Pilih Kategori - Kak Tovie</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { background: #121212; color: white; padding-top: 50px; }
-        .container { max-width: 1100px; margin: auto; padding: 20px; text-align: center; }
-        
-        .header-title { margin-bottom: 50px; }
-        .header-title h2 { font-size: 2.5rem; margin-bottom: 10px; }
-        .header-title p { opacity: 0.7; font-weight: 300; }
-
-        .grid-katalog { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 25px; 
-            margin-top: 30px;
-        }
-
-        .category-card {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            height: 400px;
-            cursor: pointer;
-            transition: all 0.5s ease;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .category-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .card-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, transparent 60%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 30px;
-            text-align: left;
-        }
-
-        .category-card h3 { font-size: 1.8rem; margin-bottom: 5px; }
-        .category-card p { font-size: 0.9rem; opacity: 0.8; }
-
-        .category-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-        .category-card:hover img { transform: scale(1.1); }
-        
-        .btn-back {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #ffd700;
-            text-decoration: none;
-            font-weight: bold;
-        }
+        body { background: #121212; color: white; text-align: center; padding: 50px 20px; }
+        .btn-back { color: #ffd700; text-decoration: none; display: block; margin-bottom: 30px; }
     </style>
 </head>
 <body>
-
-<div class="container">
     <a href="index.html" class="btn-back">← Kembali ke Beranda</a>
-    
-    <div class="header-title">
-        <h2>Pilih Kategori Produk</h2>
-        <p>Laporan visual koleksi batu dan dekorasi pilihan</p>
+    <h2 style="font-size: 2.5rem; margin-bottom: 40px;">Kategori Produk</h2>
+
+    <div class="grid-katalog" style="max-width: 1100px; margin: auto;">
+        <a href="pebbles.html" style="text-decoration: none;">
+            <div class="category-card">
+                <img src="pebbles_asli.jpg" alt="Pebbles">
+                <div class="card-overlay"><h3>Batu Pebbles</h3><p>Koleksi koral alami.</p></div>
+            </div>
+        </a>
+        <a href="teraso.html" style="text-decoration: none;">
+            <div class="category-card">
+                <img src="wastafel.jpg" alt="Wastafel">
+                <div class="card-overlay"><h3>Wastafel Teraso</h3><p>Produk wastafel estetik.</p></div>
+            </div>
+        </a>
+        <a href="decor.html" style="text-decoration: none;">
+            <div class="category-card">
+                <img src="decor.jpg" alt="Decor">
+                <div class="card-overlay"><h3>Home Decor</h3><p>Aksesori marmer mewah.</p></div>
+            </div>
+        </a>
     </div>
-
-    <div class="grid-katalog">
-        <div class="category-card" onclick="alert('Membuka detail Batu Pebbles...')">
-            <img src="https://images.unsplash.com/photo-1505142446710-0f5664599d7b?q=80&w=1000" alt="Batu Pebbles">
-            <div class="card-overlay">
-                <h3>Batu Pebbles</h3>
-                <p>Koleksi batu koral hias untuk taman dan lantai interior.</p>
-            </div>
-        </div>
-
-        <div class="category-card" onclick="alert('Membuka detail Wastafel Teraso...')">
-            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1000" alt="Wastafel Teraso">
-            <div class="card-overlay">
-                <h3>Wastafel Teraso</h3>
-                <p>Sentuhan artistik modern untuk area kamar mandi mewah.</p>
-            </div>
-        </div>
-
-        <div class="category-card" onclick="alert('Membuka detail Home Decor...')">
-            <img src="https://images.unsplash.com/photo-1513519247388-193as69419b?q=80&w=1000" alt="Home Decor">
-            <div class="card-overlay">
-                <h3>Home Decor</h3>
-                <p>Aksesori interior berbahan batu alam pilihan.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 </body>
 </html>
