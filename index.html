@@ -7,20 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { 
-            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            /* Background Gradasi Mewah */
+            background: linear-gradient(135deg, #1a1c2c 0%, #4a192c 100%);
             color: white; 
             text-align: center; 
             padding: 50px 20px;
             min-height: 100vh;
         }
-        .btn-back { color: #ffd700; text-decoration: none; font-weight: bold; }
-        h2 { font-size: 2.5rem; margin: 30px 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .btn-back { color: #ffd700; text-decoration: none; font-weight: bold; margin-bottom: 20px; display: inline-block; }
+        h2 { font-size: 2.5rem; margin: 20px 0 40px 0; }
         
-        /* Memastikan gambar di card muncul */
-        .category-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        /* Layout Grid */
+        .grid-katalog { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            max-width: 1100px; 
+            margin: auto; 
         }
     </style>
 </head>
@@ -28,20 +31,22 @@
     <a href="index.html" class="btn-back">← Kembali ke Beranda</a>
     <h2>Pilih Kategori Produk</h2>
 
-    <div class="grid-katalog" style="max-width: 1100px; margin: auto;">
-        <a href="pebbles.html">
+    <div class="grid-katalog">
+        <a href="pebbles.html" style="text-decoration: none;">
             <div class="category-card">
                 <img src="pebbles_asli.png" alt="Pebbles">
                 <div class="card-overlay"><h3>Batu Pebbles</h3></div>
             </div>
         </a>
-        <a href="teraso.html">
+        
+        <a href="teraso.html" style="text-decoration: none;">
             <div class="category-card">
                 <img src="wastafel.png" alt="Wastafel">
                 <div class="card-overlay"><h3>Wastafel Teraso</h3></div>
             </div>
         </a>
-        <a href="decor.html">
+        
+        <a href="decor.html" style="text-decoration: none;">
             <div class="category-card">
                 <img src="decor.png" alt="Decor">
                 <div class="card-overlay"><h3>Home Decor</h3></div>
