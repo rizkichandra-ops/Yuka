@@ -3,90 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koleksi Batu Pebbles - Kak Tovie</title>
+    <title>Katalog & Ide Konten - Kak Tovie</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* CSS Reset & Background Estetik */
         body { 
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0; 
             font-family: 'Plus Jakarta Sans', sans-serif;
             background: linear-gradient(135deg, #e0e5ec 0%, #cbd5e0 100%);
-            background-attachment: fixed; /* Membuat background tetap saat scroll */
+            background-attachment: fixed;
             color: #2d3436;
         }
 
-        /* Container Utama */
-        .main-wrapper {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px 80px 20px;
-        }
+        .main-wrapper { max-width: 1100px; margin: 40px auto; padding: 0 20px 100px 20px; }
 
+        /* SEKSI KATALOG */
         .container { 
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(20px);
-            padding: 40px; 
-            border-radius: 40px; 
+            padding: 40px; border-radius: 40px; 
             box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .header { text-align: center; margin-bottom: 40px; }
-        h1 { font-weight: 800; font-size: 2.2rem; color: #1a1a1a; margin-top: 10px; }
+        .pebbles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 25px; overflow: hidden; transition: 0.3s; border: 1px solid #eee; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .info { padding: 20px; text-align: center; }
+        .price { color: #0061ff; font-weight: 800; font-size: 1.1rem; display: block; margin-top: 5px; }
 
-        /* Grid Katalog */
-        .pebbles-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-            gap: 25px; 
-        }
-
-        .pebble-card { 
-            background: white; 
-            border-radius: 25px; 
-            overflow: hidden; 
-            transition: 0.4s;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .pebble-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
-        .pebble-img { width: 100%; height: 220px; object-fit: cover; }
-        .pebble-info { padding: 20px; text-align: center; }
-        .price { color: #0061ff; font-weight: 800; font-size: 1.2rem; display: block; margin-top: 5px; }
-
-        /* Tombol WA */
         .btn-wa { 
             display: block; text-align: center; background: #25d366; color: white; 
             padding: 20px; border-radius: 20px; text-decoration: none; font-weight: 700; 
-            margin-top: 40px; transition: 0.3s;
+            margin-top: 40px; box-shadow: 0 10px 20px rgba(37,211,102,0.2);
         }
-        .btn-wa:hover { background: #1ebe57; transform: scale(1.02); }
 
-        /* --- BAGIAN SCRIPT PROMOSI (DI BAWAH) --- */
-        .promo-section {
+        /* SEKSI SCRIPT VIDEO */
+        .promo-header { text-align: center; margin-bottom: 30px; }
+        .promo-header h2 { font-size: 2rem; color: #1a1c2c; margin-bottom: 10px; }
+        
+        .script-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .script-card {
             background: #1a1c2c;
             color: white;
-            padding: 40px;
-            border-radius: 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            padding: 30px;
+            border-radius: 35px;
+            position: relative;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        .promo-section h2 { color: #ffd700; border-bottom: 2px solid #ffd700; display: inline-block; padding-bottom: 5px; margin-bottom: 30px; }
+        .script-card h3 { color: #ffd700; margin-top: 0; font-size: 1.3rem; }
+        .scene { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dotted rgba(255,255,255,0.2); }
+        .scene:last-child { border: none; }
         
-        .script-box {
-            background: rgba(255,255,255,0.05);
-            padding: 25px;
-            border-radius: 20px;
-            border-left: 5px solid #ffd700;
-            margin-bottom: 20px;
-        }
+        .label { font-size: 0.75rem; font-weight: 800; color: #ffd700; text-transform: uppercase; display: block; }
+        .vis { font-size: 0.85rem; color: #aaa; font-style: italic; margin: 5px 0; }
+        .txt { font-size: 1rem; line-height: 1.5; color: #fff; }
 
-        .scene-label { color: #ffd700; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; display: block; margin-bottom: 10px; }
-        .instruction { font-style: italic; color: #aaa; margin-bottom: 5px; font-size: 0.9rem; }
-        .dialogue { font-size: 1.1rem; line-height: 1.6; }
-
-        .tag-pill { background: #ffd700; color: #000; padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; font-weight: bold; margin-right: 5px; }
+        .tag { background: #ffd700; color: black; padding: 4px 12px; border-radius: 50px; font-size: 0.7rem; font-weight: bold; margin-top: 15px; display: inline-block; }
     </style>
 </head>
 <body>
@@ -94,65 +74,69 @@
 <div class="main-wrapper">
     <div class="container">
         <div class="header">
-            <a href="katalog.html" style="text-decoration: none; color: #0061ff; font-weight: bold;">← Kembali</a>
-            <h1>Koleksi Warna Batu Pebbles</h1>
+            <a href="katalog.html" style="text-decoration: none; color: #0061ff; font-weight: bold;">← Kembali ke Katalog</a>
+            <h1 style="font-size: 2.5rem; margin-top: 15px;">Daftar Pilihan Batu Pebbles</h1>
         </div>
 
         <div class="pebbles-grid">
-            <div class="pebble-card">
-                <img src="hitam.jpg" class="pebble-img">
-                <div class="pebble-info"><b>Pebbles Hitam</b><span class="price">Rp 20.000/kg</span></div>
-            </div>
-            <div class="pebble-card">
-                <img src="putih.jpg" class="pebble-img">
-                <div class="pebble-info"><b>Pebbles Putih</b><span class="price">Rp 20.000/kg</span></div>
-            </div>
-            <div class="pebble-card">
-                <img src="pebbles.jpg" class="pebble-img">
-                <div class="pebble-info"><b>Pancawarna</b><span class="price">Rp 23.000/kg</span></div>
-            </div>
-            <div class="pebble-card">
-                <img src="hijau.jpg" class="pebble-img">
-                <div class="pebble-info"><b>Pebbles Hijau</b><span class="price">Rp 27.000/kg</span></div>
-            </div>
+            <div class="card"><img src="hitam.jpg"><div class="info"><b>Pebbles Hitam</b><span class="price">Rp 20.000/kg</span></div></div>
+            <div class="card"><img src="putih.jpg"><div class="info"><b>Pebbles Putih</b><span class="price">Rp 20.000/kg</span></div></div>
+            <div class="card"><img src="pebbles.jpg"><div class="info"><b>Pancawarna</b><span class="price">Rp 23.000/kg</span></div></div>
+            <div class="card"><img src="hijau.jpg"><div class="info"><b>Pebbles Hijau</b><span class="price">Rp 27.000/kg</span></div></div>
         </div>
 
-        <a href="https://wa.me/6289530438093" class="btn-wa">Pesan via WhatsApp Sekarang</a>
+        <a href="https://wa.me/6289530438093" class="btn-wa">Pesan Sekarang via WhatsApp</a>
     </div>
 
-    <div class="promo-section">
+    <div class="promo-header">
         <h2>🎬 Ide Script Video Promosi</h2>
-        <p style="opacity: 0.8; margin-bottom: 30px;">Gunakan script ini untuk konten TikTok/Reels berdurasi 15-30 detik.</p>
+        <p>Scroll ke bawah untuk panduan syuting konten TikTok/Reels</p>
+    </div>
 
-        <div class="script-box">
-            <span class="scene-label">Opening (0-3 Detik)</span>
-            <p class="instruction">Visual: Close-up tangan menyentuh tekstur Batu Pancawarna yang basah.</p>
-            <p class="dialogue">"Bosan dengan taman yang gitu-gitu aja? Cobain sentuhan alam yang beda."</p>
+    <div class="script-container">
+        <div class="script-card">
+            <h3>1. Gaya ASMR (Estetik)</h3>
+            <div class="scene">
+                <span class="label">Opening</span>
+                <p class="vis">Tangan merogoh tumpukan Pebbles Putih (Suara gesekan batu).</p>
+                <p class="txt">"Natural & Clean."</p>
+            </div>
+            <div class="scene">
+                <span class="label">Transition</span>
+                <p class="vis">Siram Pebbles Hitam dengan air (Efek mengkilap mewah).</p>
+                <p class="txt">"The Luxury Black Look."</p>
+            </div>
+            <div class="tag">#ASMR #HomeDecor</div>
         </div>
 
-        <div class="script-box">
-            <span class="scene-label">The Problem (3-10 Detik)</span>
-            <p class="instruction">Visual: Transisi cepat antara pot bunga polos dan taman tanpa dekorasi.</p>
-            <p class="dialogue">"Taman gersang atau pot bunga yang pucat bikin suasana rumah jadi kurang hidup."</p>
+        <div class="script-card">
+            <h3>2. Gaya Edukasi (Solusi)</h3>
+            <div class="scene">
+                <span class="label">The Problem</span>
+                <p class="vis">Tunjukkan sudut taman yang gersang/tanah polos.</p>
+                <p class="txt">"Taman kerasa gersang dan ngebosenin?"</p>
+            </div>
+            <div class="scene">
+                <span class="label">The Solution</span>
+                <p class="vis">Taburkan Batu Hijau/Putih di atas tanah tersebut.</p>
+                <p class="txt">"Cukup kasih Pebbles Premium ini. Praktis & Estetik!"</p>
+            </div>
+            <div class="tag">#TamanMinimalis #SolusiRumah</div>
         </div>
 
-        <div class="script-box">
-            <span class="scene-label">The Solution (10-20 Detik)</span>
-            <p class="instruction">Visual: Menaburkan Pebbles Putih di sekitar wastafel teraso atau taman minimalis.</p>
-            <p class="dialogue">"Kenalin, koleksi Batu Pebbles premium. Mulai dari Hitam Elegan, Putih Bersih, sampai Pancawarna yang artistik."</p>
-        </div>
-
-        <div class="script-box">
-            <span class="scene-label">Closing (20-30 Detik)</span>
-            <p class="instruction">Visual: Teks harga muncul di layar (Mulai 20rb/kg) & tombol WhatsApp.</p>
-            <p class="dialogue">"Ubah sudut rumahmu sekarang! Klik link di bio untuk katalog lengkapnya."</p>
-        </div>
-
-        <div style="margin-top: 30px;">
-            <span class="tag-pill">#BatuAlam</span>
-            <span class="tag-pill">#TamanMinimalis</span>
-            <span class="tag-pill">#InteriorDesign</span>
-            <span class="tag-pill">#HomeDecor</span>
+        <div class="script-card">
+            <h3>3. Gaya Spill Stok (Trust)</h3>
+            <div class="scene">
+                <span class="label">Behind The Scene</span>
+                <p class="vis">Tunjukkan tumpukan karung pesanan siap kirim.</p>
+                <p class="txt">"Spill pengiriman hari ini, meluncur ke pelanggan!"</p>
+            </div>
+            <div class="scene">
+                <span class="label">Close Up</span>
+                <p class="vis">Ambil segenggam Pancawarna, tunjukkan ke kamera.</p>
+                <p class="txt">"Kualitas premium, ukuran seragam. Klik link bio ya!"</p>
+            </div>
+            <div class="tag">#SpillProduk #ReadyStock</div>
         </div>
     </div>
 </div>
