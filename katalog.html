@@ -3,49 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laporan Katalog - 29/01/2026</title>
+    <title>Katalog Produk - Kak Tovie</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { background: #f8f9fa; color: #333; }
-        .container { max-width: 1000px; margin: 50px auto; padding: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .card img { width: 100%; height: 250px; object-fit: cover; }
-        .card-content { padding: 20px; }
-        .price { color: #0061ff; font-weight: bold; font-size: 1.2rem; }
-        .btn-back { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #666; }
+        body { background: #121212; color: white; padding-top: 50px; }
+        .container { max-width: 1100px; margin: auto; padding: 20px; text-align: center; }
+        
+        .header-title { margin-bottom: 50px; }
+        .header-title h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .header-title p { opacity: 0.7; font-weight: 300; }
+
+        .grid-katalog { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            margin-top: 30px;
+        }
+
+        .category-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 400px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 10%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+            text-align: left;
+        }
+
+        .category-card h3 { font-size: 1.8rem; margin-bottom: 5px; }
+        .category-card p { font-size: 0.9rem; opacity: 0.8; }
+
+        .category-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .category-card:hover img { transform: scale(1.1); }
+        
+        .btn-back {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="btn-back">← Kembali</a>
-        <h2 style="margin-bottom: 30px;">Katalog Batu Alam - Update 29 Jan 2026</h2>
-        
-        <div class="grid">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1590272813982-96c8f2a7bbba?q=80&w=1000" alt="Batu Marmer">
-                <div class="card-content">
-                    <h3>Marmer Statuario</h3>
-                    <p class="price">Rp 2.500.000 /m²</p>
-                    <p style="font-size: 0.9rem; color: #777; margin-top: 10px;">
-                        <b>Kegunaan:</b> Sangat mewah untuk lantai ruang tamu utama atau dinding aksen.
-                    </p>
-                </div>
-            </div>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1628592102751-ba83b0356251?q=80&w=1000" alt="Batu Granit">
-                <div class="card-content">
-                    <h3>Granit Hitam Nero</h3>
-                    <p class="price">Rp 1.200.000 /m²</p>
-                    <p style="font-size: 0.9rem; color: #777; margin-top: 10px;">
-                        <b>Kegunaan:</b> Tahan gores, cocok untuk meja dapur (kitchen top) dan area outdoor.
-                    </p>
-                </div>
+<div class="container">
+    <a href="index.html" class="btn-back">← Kembali ke Beranda</a>
+    
+    <div class="header-title">
+        <h2>Pilih Kategori Produk</h2>
+        <p>Laporan visual koleksi batu dan dekorasi pilihan</p>
+    </div>
+
+    <div class="grid-katalog">
+        <div class="category-card" onclick="alert('Membuka detail Batu Pebbles...')">
+            <img src="https://images.unsplash.com/photo-1505142446710-0f5664599d7b?q=80&w=1000" alt="Batu Pebbles">
+            <div class="card-overlay">
+                <h3>Batu Pebbles</h3>
+                <p>Koleksi batu koral hias untuk taman dan lantai interior.</p>
+            </div>
+        </div>
+
+        <div class="category-card" onclick="alert('Membuka detail Wastafel Teraso...')">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1000" alt="Wastafel Teraso">
+            <div class="card-overlay">
+                <h3>Wastafel Teraso</h3>
+                <p>Sentuhan artistik modern untuk area kamar mandi mewah.</p>
+            </div>
+        </div>
+
+        <div class="category-card" onclick="alert('Membuka detail Home Decor...')">
+            <img src="https://images.unsplash.com/photo-1513519247388-193as69419b?q=80&w=1000" alt="Home Decor">
+            <div class="card-overlay">
+                <h3>Home Decor</h3>
+                <p>Aksesori interior berbahan batu alam pilihan.</p>
             </div>
         </div>
     </div>
+</div>
+
 </body>
 </html>
