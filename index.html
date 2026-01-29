@@ -2,20 +2,51 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katalog Yuka - Hai Kak Tovie!</title>
+    <title>Pilih Kategori - Kak Tovie</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: white; 
+            text-align: center; 
+            padding: 50px 20px;
+            min-height: 100vh;
+        }
+        .btn-back { color: #ffd700; text-decoration: none; font-weight: bold; }
+        h2 { font-size: 2.5rem; margin: 30px 0; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        
+        /* Memastikan gambar di card muncul */
+        .category-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-    <div class="hero-wrapper">
-        <div class="overlay"></div>
-        <div class="content">
-            <p class="greeting">Hai Kak Tovie 😊</p>
-            <h1>Visualisasi & Katalog<br><span class="highlight">Batu Alam Eksklusif</span></h1>
-            <p class="subtext">Dokumentasi hasil pemasangan dan daftar harga material terbaru.</p>
-            <a href="katalog.html" class="btn-aesthetic">Laporan Tanggal 29/01/2026 →</a>
-        </div>
+    <a href="index.html" class="btn-back">← Kembali ke Beranda</a>
+    <h2>Pilih Kategori Produk</h2>
+
+    <div class="grid-katalog" style="max-width: 1100px; margin: auto;">
+        <a href="pebbles.html">
+            <div class="category-card">
+                <img src="pebbles_asli.png" alt="Pebbles">
+                <div class="card-overlay"><h3>Batu Pebbles</h3></div>
+            </div>
+        </a>
+        <a href="teraso.html">
+            <div class="category-card">
+                <img src="wastafel.png" alt="Wastafel">
+                <div class="card-overlay"><h3>Wastafel Teraso</h3></div>
+            </div>
+        </a>
+        <a href="decor.html">
+            <div class="category-card">
+                <img src="decor.png" alt="Decor">
+                <div class="card-overlay"><h3>Home Decor</h3></div>
+            </div>
+        </a>
     </div>
 </body>
 </html>
