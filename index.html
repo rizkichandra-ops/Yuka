@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katalog Yuka - Hai Kak Tovie!</title>
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; font-family: sans-serif; }
-        .hero {
-            height: 100vh;
-            /* Nama file sudah diganti jadi pebbles.jpg */
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('pebbles.jpg') no-repeat center center/cover;
-            display: flex; align-items: center; justify-content: center; color: white; text-align: center;
-        }
-        .btn { background: #ffd700; color: #000; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hero">
-        <div>
-            <p>Hai Kak Tovie 😊</p>
-            <h1>Visualisasi & Katalog<br>Batu Alam Eksklusif</h1>
-            <a href="katalog.html" class="btn">Masuk ke Katalog →</a>
+    <div class="hero-wrapper">
+        <div class="overlay"></div>
+        <div class="content">
+            <p class="greeting">Hai Kak Tovie 😊</p>
+            <h1>Visualisasi & Katalog<br><span class="highlight">Batu Alam Eksklusif</span></h1>
+            <p class="subtext">Dokumentasi hasil pemasangan dan daftar harga material terbaru.</p>
+            
+            <a href="katalog.html" class="btn-aesthetic">
+                <span class="btn-text">Laporan Tanggal 29/01/2026</span>
+                <span class="btn-icon">→</span>
+            </a>
         </div>
     </div>
 </body>
