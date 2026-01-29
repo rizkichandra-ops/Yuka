@@ -2,45 +2,90 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koleksi Batu Pebbles</title>
     <style>
-        body { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 40px 20px; font-family: sans-serif; min-height: 100vh; }
-        .container { max-width: 1000px; margin: auto; background: rgba(255,255,255,0.9); padding: 30px; border-radius: 30px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 30px; }
-        .card { background: white; border-radius: 20px; overflow: hidden; border: 1px solid #eee; text-align: center; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card img { width: 100%; height: 200px; object-fit: cover; background: #ddd; }
+        body { 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+            padding: 40px 20px; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container { 
+            max-width: 1000px; 
+            margin: auto; 
+            background: rgba(255,255,255,0.95); 
+            padding: 30px; 
+            border-radius: 30px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); 
+        }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 20px; 
+            margin-top: 30px; 
+        }
+        .card { 
+            background: white; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            border: 1px solid #eee; 
+            text-align: center; 
+            transition: 0.3s ease; 
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card img { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            background: #eee; 
+        }
         .info { padding: 15px; }
-        .price { color: #0061ff; font-weight: bold; margin: 10px 0; display: block; }
-        .desc { font-size: 0.85rem; color: #666; line-height: 1.4; }
-        .btn-wa { display: block; text-align: center; background: #25d366; color: white; padding: 18px; border-radius: 15px; text-decoration: none; font-weight: bold; margin-top: 30px; }
+        .price { color: #0061ff; font-weight: bold; margin: 5px 0; display: block; }
+        .btn-wa { 
+            display: block; 
+            text-align: center; 
+            background: #25d366; 
+            color: white; 
+            padding: 18px; 
+            border-radius: 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin-top: 30px; 
+            transition: 0.3s;
+        }
+        .btn-wa:hover { background: #1ebe57; transform: scale(1.02); }
     </style>
 </head>
 <body>
     <div class="container">
         <a href="katalog.html" style="text-decoration: none; color: #0061ff; font-weight: bold;">← Kembali</a>
-        <h1 style="text-align: center;">Daftar Pilihan Batu Pebbles</h1>
+        <h1 style="text-align: center; color: #333;">Koleksi Warna Batu Pebbles</h1>
 
         <div class="grid">
             <div class="card">
-                <img src="hitam.jpg">
-                <div class="info"><b>Pebbles Hitam</b><span class="price">Rp 20.000/kg</span><p class="desc">Untuk taman minimalis elegan.</p></div>
+                <img src="hitam.jpg" alt="Pebbles Hitam" onerror="this.src='pebbles.jpg'">
+                <div class="info"><b>Hitam</b><span class="price">Rp 20.000/kg</span></div>
             </div>
+            
             <div class="card">
-                <img src="putih.jpg">
-                <div class="info"><b>Pebbles Putih</b><span class="price">Rp 20.000/kg</span><p class="desc">Untuk pot & area refleksi.</p></div>
+                <img src="putih.jpg" alt="Pebbles Putih" onerror="this.src='pebbles.jpg'">
+                <div class="info"><b>Putih</b><span class="price">Rp 20.000/kg</span></div>
             </div>
+            
             <div class="card">
-                <img src="pebbles.jpg">
-                <div class="info"><b>Pebbles Pancawarna</b><span class="price">Rp 23.000/kg</span><p class="desc">Aksen taman lebih artistik.</p></div>
+                <img src="pebbles.jpg" alt="Pebbles Pancawarna">
+                <div class="info"><b>Pancawarna</b><span class="price">Rp 23.000/kg</span></div>
             </div>
+            
             <div class="card">
-                <img src="hijau.jpg">
-                <div class="info"><b>Pebbles Hijau</b><span class="price">Rp 27.000/kg</span><p class="desc">Kesan asri & mewah.</p></div>
+                <img src="hijau.jpg" alt="Pebbles Hijau" onerror="this.src='pebbles.jpg'">
+                <div class="info"><b>Hijau</b><span class="price">Rp 27.000/kg</span></div>
             </div>
         </div>
 
-        <a href="https://wa.me/6289530438093?text=Halo%20Kak%20Tovie,%20saya%20tertarik%20dengan%20Batu%20Pebbles" class="btn-wa">Pesan via WhatsApp Sekarang</a>
+        <a href="https://wa.me/6289530438093?text=Halo%20Kak%20Tovie" class="btn-wa">Pesan via WhatsApp Sekarang</a>
     </div>
 </body>
 </html>
