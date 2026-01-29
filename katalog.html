@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Katalog - 29/01/2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { background: #f8f9fa; color: #333; }
+        .container { max-width: 1000px; margin: 50px auto; padding: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+        .card-content { padding: 20px; }
+        .price { color: #0061ff; font-weight: bold; font-size: 1.2rem; }
+        .btn-back { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="btn-back">← Kembali</a>
+        <h2 style="margin-bottom: 30px;">Katalog Batu Alam - Update 29 Jan 2026</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1590272813982-96c8f2a7bbba?q=80&w=1000" alt="Batu Marmer">
+                <div class="card-content">
+                    <h3>Marmer Statuario</h3>
+                    <p class="price">Rp 2.500.000 /m²</p>
+                    <p style="font-size: 0.9rem; color: #777; margin-top: 10px;">
+                        <b>Kegunaan:</b> Sangat mewah untuk lantai ruang tamu utama atau dinding aksen.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1628592102751-ba83b0356251?q=80&w=1000" alt="Batu Granit">
+                <div class="card-content">
+                    <h3>Granit Hitam Nero</h3>
+                    <p class="price">Rp 1.200.000 /m²</p>
+                    <p style="font-size: 0.9rem; color: #777; margin-top: 10px;">
+                        <b>Kegunaan:</b> Tahan gores, cocok untuk meja dapur (kitchen top) dan area outdoor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
