@@ -2,33 +2,29 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Batu Pebbles - Kak Tovie</title>
+    <title>Koleksi Batu Pebbles</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { background: #f4f7f6; color: #333; padding: 40px 20px; }
-        .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 25px; box-shadow: 0 15px 40px rgba(0,0,0,0.05); }
-        .main-img { width: 100%; border-radius: 20px; height: 400px; object-fit: cover; margin: 20px 0; border: 1px solid #eee; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
-        .btn-wa { display: block; text-align: center; background: #25d366; color: white; padding: 15px; border-radius: 15px; text-decoration: none; font-weight: bold; margin-top: 30px; }
+        body { background: #f4f7f6; padding: 40px 20px; font-family: sans-serif; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .pebbles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 25px; }
+        .pebble-item { background: #f9f9f9; padding: 15px; border-radius: 15px; border: 1px solid #ddd; }
+        .price { color: #0061ff; font-weight: bold; font-size: 1.1rem; }
+        .btn-wa { display: block; text-align: center; background: #25d366; color: white; padding: 15px; border-radius: 15px; text-decoration: none; margin-top: 30px; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="katalog.html" style="text-decoration: none; color: #0061ff; font-weight: bold;">← Kembali ke Katalog</a>
-        <h1 style="margin-top: 20px;">Batu Pebbles Alami</h1>
-        
-        <img src="pebbles_asli.jpg" class="main-img" alt="Batu Pebbles">
-
-        <h3>Daftar Harga /Kg</h3>
-        <table>
-            <tr><td>Kecil (1-2 cm)</td><td><b>Rp 15.000</b></td></tr>
-            <tr><td>Sedang (3-5 cm)</td><td><b>Rp 18.500</b></td></tr>
-        </table>
-
-        <a href="https://wa.me/6281234567890?text=Halo%20Kak%20Tovie,%20saya%20ingin%20tanya%20stok%20Batu%20Pebbles" class="btn-wa">Hubungi WhatsApp</a>
+        <a href="katalog.html">← Kembali</a>
+        <h1>Daftar Pilihan Batu Pebbles</h1>
+        <img src="pebbles_asli.jpg" style="width:100%; border-radius:15px; margin:20px 0;">
+        <div class="pebbles-grid">
+            <div class="pebble-item"><b>Hitam</b><br><span class="price">Rp 20.000/kg</span><p>Untuk taman minimalis.</p></div>
+            <div class="pebble-item"><b>Putih</b><br><span class="price">Rp 20.000/kg</span><p>Untuk pot & refleksi.</p></div>
+            <div class="pebble-item"><b>Pancawarna</b><br><span class="price">Rp 23.000/kg</span><p>Aksen taman artistik.</p></div>
+            <div class="pebble-item"><b>Hijau</b><br><span class="price">Rp 27.000/kg</span><p>Kesan asri & mewah.</p></div>
+        </div>
+        <a href="https://wa.me/6289530438093?text=Halo%20Kak%20Tovie,%20saya%20mau%20order%20Pebbles" class="btn-wa">Pesan via WhatsApp</a>
     </div>
 </body>
 </html>
